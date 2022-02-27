@@ -1,5 +1,6 @@
 <?php
-require(__DIR__ . "/../../partials/nav.php"); ?>
+require(__DIR__ . "/../../partials/nav.php");
+?>
 <form onsubmit="return validate(this)" method="POST">
     <div>
         <label for="email">Email</label>
@@ -28,7 +29,8 @@ require(__DIR__ . "/../../partials/nav.php"); ?>
 if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm"])) {
     $email = se($_POST, "email", "", false);
     $password = se($_POST, "password", "", false);
-    $confirm = se($_POST, "confirm", "", false);
+    $confirm = se(
+        $_POST,"confirm","",false);
     //TODO 3
     $hasError = false;
     if (empty($email)) {
@@ -36,14 +38,14 @@ if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm
         $hasError = true;
     }
     //sanitize
-    $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+    $email = sanitize_email($email);
     //validate
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    if (!is_valid_email($email)) {
         echo "Invalid email address";
         $hasError = true;
     }
     if (empty($password)) {
-        echo "Password must not be empty!";
+        echo "password must not be empty";
         $hasError = true;
     }
     if (empty($confirm)) {
@@ -54,7 +56,9 @@ if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm
         echo "Password too short";
         $hasError = true;
     }
-    if (strlen($password) > 0 && $password !== $confirm) {
+    if (
+        strlen($password) > 0 && $password !== $confirm
+    ) {
         echo "Passwords must match";
         $hasError = true;
     }
@@ -64,12 +68,12 @@ if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm
         $hash = password_hash($password, PASSWORD_BCRYPT);
         $db = getDB();
         $stmt = $db->prepare("INSERT INTO Users (email, password) VALUES(:email, :password)");
-        try{
-            $stmt-> execute([":email" => $email, ":password" => $hash]);
+        try {
+            $stmt->execute([":email" => $email, ":password" => $hash]);
             echo "Successfully registered!";
-        } catch (Exception $e){
+        } catch (Exception $e) {
             echo "There was a problem registering";
-            "<pre?>" . var_export($e, true) . "</pre>";
+            "<pre>" . var_export($e, true) . "</pre>";
         }
     }
 }
