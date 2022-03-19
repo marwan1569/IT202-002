@@ -1,8 +1,6 @@
 <?php
 require_once(__DIR__ . "/../../partials/nav.php");
-if (!is_logged_in()) {
-    die(header("Location: login.php"));
-}
+is_logged_in(true);
 ?>
 <?php
 if (isset($_POST["save"])) {
@@ -14,6 +12,7 @@ if (isset($_POST["save"])) {
     $stmt = $db->prepare("UPDATE Users set email = :email, username = :username where id = :id");
     try {
         $stmt->execute($params);
+        flash("Profile saved", "success");
     } catch (Exception $e) {
         if ($e->errorInfo[1] === 1062) {
             //https://www.php.net/manual/en/function.preg-match.php
@@ -122,21 +121,7 @@ $username = get_username();
         //example of using flash via javascript
         //find the flash container, create a new element, appendChild
         if (pw !== con) {
-            //find the container
-            let flash = document.getElementById("flash");
-            //create a div (or whatever wrapper we want)
-            let outerDiv = document.createElement("div");
-            outerDiv.className = "row justify-content-center";
-            let innerDiv = document.createElement("div");
-
-            //apply the CSS (these are bootstrap classes which we'll learn later)
-            innerDiv.className = "alert alert-warning";
-            //set the content
-            innerDiv.innerText = "Password and Confirm password must match";
-
-            outerDiv.appendChild(innerDiv);
-            //add the element to the DOM (if we don't it merely exists in memory)
-            flash.appendChild(outerDiv);
+            flash("Password and Confrim password must match", "warning");
             isValid = false;
         }
         return isValid;
