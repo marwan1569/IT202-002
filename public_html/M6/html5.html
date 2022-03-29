@@ -247,7 +247,7 @@
         if (ball.y + ball.h/2 >= rightPaddle.y && ball.y + ball.h/2 <= rightPaddle.y + rightPaddle.h) {
             if (ball.x + ball.w >= rightPaddle.x) {
             bounceBall();
-            ball = makeRect(0, 0, ballLength + 100, ballLength + 100, ballSpeed, '#0000BC')
+            ball = makeRect(0, 0, ballLength + 100 , ballLength + 100, ballSpeed, '#0000BC');
             }
         }
         // Score if the ball goes past a paddle
