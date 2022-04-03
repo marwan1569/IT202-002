@@ -1,0 +1,36 @@
+.alert-success {
+    background-color: green
+}
+
+.alert-warning {
+    background-color: yellow;
+}
+
+.alert-danger {
+    background-color: red;
+}
+
+.alert-info {
+    background-color: teal;
+}
+
+nav ul li{
+    display:inline;
+    margin: 4px;
+    font-size: large;
+}
+/* make links change color */ 
+nav ul li:hover{
+    background-color: yellow;
+}
+/*Uppercasing first letter, changing font */
+h1, a {
+    text-transform: capitalize;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+nav li a{color: skyblue}
+body{
+    background-color: gray;
+    color: rgb(0, 43, 153);
+}
