@@ -13,11 +13,24 @@
 .alert-info {
     background-color: teal;
 }
-nav li{display: inline; background-color: rebeccapurple;}
-nav li a{color: hotpink}
-input{border-radius: 100%;}
-body{
-    background-color: beige;
-    color: rgb(153, 0, 153);
 
+nav ul li{
+    display:inline;
+    margin: 4px;
+    font-size: large;
+}
+/* make links change color */ 
+nav ul li:hover{
+    background-color: yellow;
+}
+/*Uppercasing first letter, changing font */
+h1, a {
+    text-transform: capitalize;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+nav li a{color: skyblue}
+body{
+    background-color: gray;
+    color: rgb(0, 43, 153);
 }
