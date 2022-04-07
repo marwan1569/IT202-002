@@ -36,8 +36,17 @@
   - [X] \(4/3/22) User will be able to edit their profile
     -  Link to related .md file: [https://github.com/marwan1569/IT202-002/blob/Milestone1/public_html/Project/milestone1.md](https://mb25-prod.herokuapp.com/Project/profile.php)  
 - Milestone 2
-  - [ ] \(mm/dd/yyyy of completion) Feature Title (from the proposal bullet point, if it's a sub-point indent it properly)
-  -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Pick a simple game to implement, anything that generates a score that’s more advanced than a simple random number generator (may build off of a sample from the site shared in class for the HTML5 HW)
+    -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) The system will save the user’s score at the end of the game only if the user is logged in
+    -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) The user will be able to see their last 10 scores
+    -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Create function(s) that output the following scoreboards: Top 10 Weekly, Top 10 Monthly, Top 10 Lifetime
+    -  Link to related .md file: [Link Name](link url)
+  - [ ] \(mm/dd/yyyy of completion) Create a Homepage (index.php)
+    -  Link to related .md file: [Link Name](link url)
+  
 - Milestone 3
   -- [ ] \(mm/dd/yyyy of completion) Feature Title (from the proposal bullet point, if it's a sub-point indent it properly)
   -  Link to related .md file: [Link Name](link url)
