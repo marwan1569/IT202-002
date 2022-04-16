@@ -37,7 +37,7 @@
     -  Link to related .md file: [https://github.com/marwan1569/IT202-002/blob/Milestone1/public_html/Project/milestone1.md](https://mb25-prod.herokuapp.com/Project/profile.php)  
 - Milestone 2
   - [ ] \(mm/dd/yyyy of completion) Create the Accounts table (id, account_number [unique, always 12 characters], user_id, balance (default 0), account_type, created, modified)
-    -  Link to related .md file: [Link Name](link url)
+    -  Link to related .md file: [Link Name](link url)  
   - [ ] \(mm/dd/yyyy of completion)Project setup steps
     -  Link to related .md file: [Link Name](link url)
   - [ ] \(mm/dd/yyyy of completion) Create the Transactions table
