@@ -36,22 +36,22 @@
   - [X] \(4/3/22) User will be able to edit their profile
     -  Link to related .md file: [https://github.com/marwan1569/IT202-002/blob/Milestone1/public_html/Project/milestone1.md](https://mb25-prod.herokuapp.com/Project/profile.php)  
 - Milestone 2
-  - [ ] \(mm/dd/yyyy of completion) Create the Accounts table (id, account_number [unique, always 12 characters], user_id, balance (default 0), account_type, created, modified)
-    -  Link to related .md file: [Link Name](link url)  
-  - [ ] \(mm/dd/yyyy of completion)Project setup steps
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Create the Transactions table
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) Dashboard page
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) User will be able to create a checking account
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) User will be able to list their accounts
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) User will be able to click an account for more information (a.k.a Transaction History page)
-    -  Link to related .md file: [Link Name](link url)
-  - [ ] \(mm/dd/yyyy of completion) User will be able to deposit/withdraw from their account(s)
-    -  Link to related .md file: [Link Name](link url)
+  - [X] \(4/16/22) Create the Accounts table (id, account_number [unique, always 12 characters], user_id, balance (default 0), account_type, created, modified)
+    -  Link to related .md file: [https://github.com/marwan1569/IT202-002/blob/Milestone2/public_html/Project/milestone2.md](https://github.com/marwan1569/IT202-002/blob/Milestone2/public_html/Project/sql/006_create_table_acounts.sql)  
+  - [X] \(4/16/22)Project setup steps
+    -  Link to related .md file: [https://github.com/marwan1569/IT202-002/blob/Milestone2/public_html/Project/milestone2.md](https://github.com/marwan1569/IT202-002/blob/Milestone2/public_html/Project/sql/009_insert_system_account.sql)
+  - [X] \(4/16/22) Create the Transactions table
+    -  Link to related .md file: [https://github.com/marwan1569/IT202-002/blob/Milestone2/public_html/Project/milestone2.md](https://github.com/marwan1569/IT202-002/blob/Milestone2/public_html/Project/sql/010_create_table_transactions.sql)
+  - [X] \(4/16/22) Dashboard page
+    -  Link to related .md file: [https://github.com/marwan1569/IT202-002/blob/Milestone2/public_html/Project/milestone2.md](https://mb25-prod.herokuapp.com/Project/dashboard.php)
+  - [X] \(4/17/22) User will be able to create a checking account
+    -  Link to related .md file: [https://github.com/marwan1569/IT202-002/blob/Milestone2/public_html/Project/milestone2.md](https://mb25-prod.herokuapp.com/Project/create_acct.php)
+  - [X] \(4/17/22) User will be able to list their accounts
+    -  Link to related .md file: [https://github.com/marwan1569/IT202-002/blob/Milestone2/public_html/Project/milestone2.md](https://mb25-prod.herokuapp.com/Project/view_accounts.php)
+  - [X] \(4/17/22) User will be able to click an account for more information (a.k.a Transaction History page)
+    -  Link to related .md file: [https://github.com/marwan1569/IT202-002/blob/Milestone2/public_html/Project/milestone2.md](https://mb25-prod.herokuapp.com/Project/view_transactions.php?id=7)
+  - [X] \(4/17/22) User will be able to deposit/withdraw from their account(s)
+    -  Link to related .md file: [https://github.com/marwan1569/IT202-002/blob/Milestone2/public_html/Project/milestone2.md](https://mb25-prod.herokuapp.com/Project/transaction.php?type=deposit)
   
 - Milestone 3
   -- [ ] \(mm/dd/yyyy of completion) Feature Title (from the proposal bullet point, if it's a sub-point indent it properly)
