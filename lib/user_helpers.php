@@ -124,7 +124,7 @@ function updateAccount($id, $bal){
 }
 function getRealTimeBalance($balanceChange){
     $db = getDB();
-    $q = "SELECT ifnull(SUM(balance), 0) as total from Accounts WHERE account_number=:id";
+    $q = "SELECT ifnull(SUM(balance), 0) as total from Accounts WHERE id=:id";
     $stmt = $db->prepare($q);
     $s = $stmt->execute([":id" =>$balanceChange]);
     if ($s){
