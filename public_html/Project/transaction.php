@@ -89,6 +89,7 @@ if(isset($_POST['submit'])){
 			flash("Deposit Successful!");
 			break;
 		case 'withdraw':
+			flash($_POST['source']);
 			if(getRealTimeBalance($_POST['source']) >= $BalanceChange){
 			    do_bank_action($_POST['source'], $worldID, ($BalanceChange), '1', $memo);
 			    flash("Withdrawal Successful!");
