@@ -1,14 +1,20 @@
 <?php
 require(__DIR__ . "/../../partials/nav.php");
+
+$srcID = get_user_id();
+$db = getDB();
+$stmt = $db->prepare("SELECT id, account_number from Accounts WHERE user_id=:user_id order by created DESC");
+$r = $stmt->execute([":user_id"=>get_user_id()]);
+$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
+<form method="POST">
     <label>Destination Account</label>
     <select name="dest_acc" required>
-        <?php foreach ($acc_results as $account): ?>
-            <option value="<?php se($account["id"]); ?>">
-                <?php se($r["account_number"]);?> 
-            </option>
+        <?php foreach ($results as $r): ?>
+            <option value="<?php se($r["id"]);?>"><?php se($r["account_number"]);?></option>
         <?php endforeach; ?>
     </select>
+</form>
 <?php ?>
 </div>
 <label>Memo</label>
