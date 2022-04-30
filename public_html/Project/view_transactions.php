@@ -1,5 +1,7 @@
 <?php require_once(__DIR__ . '/../../partials/nav.php'); ?>
 <?php
+$StartDate="0000-00-00";
+$EndDate=date('Y-m-d');
 if (!is_logged_in()) {
     //this will redirect to login and kill the rest of this script (prevent it from executing)
     flash("You need to be logged in to access this page");
@@ -35,13 +37,27 @@ if(isset($_GET["id"])){
 $results = [];
 if (isset($id)) {
     $db = getDB();
-    $stmt = $db->prepare("SELECT source.account_number as source, dest.account_number as dest, ExpectedTotal, memo, T.TransactionType, T.BalanceChange, T.created from Transactions as T JOIN Accounts as source on source.id = T.source JOIN Accounts as dest on dest.id = T.dest WHERE T.source =:id LIMIT 10");
-    $r = $stmt->execute([":id" => $id]);
-    if ($r) {
+    $stmt = $db->prepare("SELECT source.account_number as source, dest.account_number as dest, ExpectedTotal, memo, T.TransactionType, T.BalanceChange, T.created from Transactions as T JOIN Accounts as source on source.id = T.source JOIN Accounts as dest on dest.id = T.dest WHERE T.source =:id and T.created BETWEEN :StartDate AND :EndDate order by created DESC LIMIT :Pagecount OFFSET :offset");
+
+    $stmt->bindValue(":offset", (int)(($page-1) * $per_page), PDO::PARAM_INT);
+    $stmt->bindValue(":Pagecount", $per_page, PDO::PARAM_INT);
+    $stmt->bindValue(":StartDate", $StartDate, PDO::PARAM_STR);
+    $stmt->bindValue(":EndDate", $EndDate, PDO::PARAM_STR);
+    $stmt->bindValue(":id", $id);
+    $stmt->execute();
 	$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
-    else {
-        flash("There was a problem fetching the results");
+    if(isset($_POST["submit"])){
+        $edate=date('Y-m-d', strtotime($_POST["EndDate"]. ' + 1 day'));
+        $stmt = $db->prepare("SELECT source.account_number as source, dest.account_number as dest, ExpectedTotal, memo, T.TransactionType, T.BalanceChange, T.created from Transactions as T JOIN Accounts as source on source.id = T.source JOIN Accounts as dest on dest.id = T.dest WHERE T.source =:id and T.created BETWEEN :StartDate AND :EndDate LIMIT 10");
+        $r = $stmt->execute([":id" => $id,":StartDate"=>$_POST["StartDate"],":EndDate"=>$edate]);
+        if ($r) {
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $StartDate=$_POST["StartDate"];
+        $EndDate=$_POST["EndDate"];
+        }
+        else {
+            flash("There was a problem fetching the results");
+        }  
     }
 }
 ?>
@@ -83,17 +99,32 @@ if (isset($id)) {
                 </tr>
             <?php endforeach; ?>
 	  </tbody>
+      <div class="mb-3">
+      <form method="POST">
+        <label for="StartDate">Start Date</label>
+        <input type="text" name="StartDate" id="Start Date" value="<?php se($StartDate); ?>" />
+        <div class="mb-3">
+        <label for="EndDate">End Date</label>
+        <input type="text" name="EndDate" id="End Date" value="<?php se($EndDate); ?>" />
+        <input type="submit" name="submit" value="Apply"/>
+        </form>
         </table>
     <?php else: ?>
         <p>No results</p>
     <?php endif; ?>
 
 <p></p>
-  <!-- <ul class="pagination pagination-lg">
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-  </ul> -->
+<ul class="pagination pagination-lg">
+<li><a href="<?php echo get_url('view_transactions.php?id=' . $id); ?>&page=1">1</a></li>
+<li><a href="<?php echo get_url('view_transactions.php?id=' . $id); ?>&page=2">2</a></li>
+    <li><a href="<?php echo get_url('view_transactions.php?id=' . $id); ?>&page=3">3</a></li>
+    <li><a href="<?php echo get_url('view_transactions.php?id=' . $id); ?>&page=4">4</a></li>
+    <li><a href="<?php echo get_url('view_transactions.php?id=' . $id); ?>&page=5">5</a></li>
+    <li><a href="<?php echo get_url('view_transactions.php?id=' . $id); ?>&page=6">6</a></li>
+    <li><a href="<?php echo get_url('view_transactions.php?id=' . $id); ?>&page=7">7</a></li>
+    <li><a href="<?php echo get_url('view_transactions.php?id=' . $id); ?>&page=8">8</a></li>
+    <li><a href="<?php echo get_url('view_transactions.php?id=' . $id); ?>&page=9">9</a></li>
+    <li><a href="<?php echo get_url('view_transactions.php?id=' . $id); ?>&page=10">10</a></li>
+    <li?><a href="<?php echo get_url('view_transactions.php?id=' . $id); ?>&page=1&type=" . $type>Deposit</a></li>
+  </ul>
 <?php require(__DIR__ . '/../../partials/flash.php'); ?>

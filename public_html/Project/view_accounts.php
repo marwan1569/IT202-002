@@ -41,6 +41,7 @@ if (isset($id)) {
                        
 			<a type="button" class = "btn btn-primary" href="transaction.php?type=<?php se("deposit");?>">Deposit</a>
 			<a type="button" class = "btn btn-primary" href="transaction.php?type=<?php se("withdraw");?>">Withdraw</a>
+            <a type="button" class = "btn btn-primary" href="transaction.php?type=<?php se("Transfer");?>">Transfer</a>
 			<a type="button" class = "btn btn-primary" href="view_transactions.php?id=<?php se($r['id']);?>">Transactions</a>
                    </div>
             <?php endforeach; ?>
