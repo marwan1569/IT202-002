@@ -18,8 +18,8 @@ try{
     }
 } catch (Exception $e) {
     flash("An unexpected error occurred, please try again", "danger");
-    //echo "<pre>" . var_export($e->errorInfo, true) . "</pre>";
 }
+
 
 if (isset($_POST["save"])) {
     $email = se($_POST, "email", null, false);
@@ -131,11 +131,11 @@ $username = get_username();
             <input class="form-control" type="password" name="confirmPassword" id="conp" />
         </div>
         <div class="mb-3">
-            <label class="form-label" for="FirstName">FirstName</label>
+            <label class="form-label" for="FirstName">First Name</label>
             <input class="form-control" type="text" name="FirstName" id="FirstName" value="<?php se($FirstName);?>"/>
         </div>
         <div class="mb-3">
-            <label class="form-label" for="LastName">LastName</label>
+            <label class="form-label" for="LastName">Last Name</label>
             <input class="form-control" type="text" name="LastName" id="LastName" value="<?php se($LastName);?>"/>
         </div>
         <input type="submit" class="mt-3 btn btn-primary" value="Update Profile" name="save" />
