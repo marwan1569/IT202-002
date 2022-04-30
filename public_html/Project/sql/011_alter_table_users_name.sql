@@ -1,1 +1,1 @@
-ALTER TABLE Users ADD COLUMN FirstName varchar(30)
+ALTER TABLE Users ADD COLUMN FirstName varchar(100)
