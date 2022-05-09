@@ -24,15 +24,19 @@ if(isset($_POST["save"])){
 	}
        	else{
 	    $acctnum = rand(100000000000, 999999999999);
-            $accttype = $_POST["account_type"];
+        $accttype = $_POST["account_type"];
+		$apy = 0;
+		if ($accttype == "Savings"){
+			$apy = 0.1;
+		}
 	    $user = get_user_id();
 	    $db = getDB();
 	    $stmt = $db->prepare("INSERT INTO Accounts (account_number,account_type, user_id) VALUES(:account_number, :account_type, :user)");
 	    $r = $stmt->execute([
 	        ":account_number"=>$acctnum,
 	        ":account_type"=>$accttype,
-	        ":user"=>$user
-			 //":bal"=>$bal
+	        ":user"=>$user,
+			//":balance"=>$bal
 	    ]);
 	    if($r){
 	        $accountID = $db->lastInsertId();
@@ -59,4 +63,13 @@ if(isset($_POST["save"])){
     }
 }
 ?>
+<form method="POST">
+	<label>Account Type</label>
+	<select name="account_type">
+		<option value="Checking">Checking</option>
+		<option value="Savings">Saving</option>
+	</select>
+	<input type="number" name="balance" placeholder="Balance"/>
+	<input type="submit" name="save" value="Create"/>
+</form>
 <?php require(__DIR__ . '/../../partials/flash.php');

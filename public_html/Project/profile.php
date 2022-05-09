@@ -138,6 +138,14 @@ $username = get_username();
             <label class="form-label" for="LastName">Last Name</label>
             <input class="form-control" type="text" name="LastName" id="LastName" value="<?php se($LastName);?>"/>
         </div>
+        <div class="mb-3">
+            <label>Privacy Settings</label>
+            <select name="account_type">
+                <option value="public">Public</option>
+                <option value="private">Private</option>
+            </select>
+        </div>
+
         <input type="submit" class="mt-3 btn btn-primary" value="Update Profile" name="save" />
     </form>
 </div> 
