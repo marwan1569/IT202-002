@@ -1,7 +1,7 @@
 # Project Name: Simple Bank
 ## Project Summary: his project will create a bank simulation for users. They’ll be able to have various accounts, do standard bank functions like deposit, withdraw, internal (user’s accounts)/external(other user’s accounts) transfers, and creating/closing accounts.
 ## Github Link: [https://github.com/marwan1569/IT202-002/tree/prod/public_html/Project]
-## Project Board Link: 
+## Project Board Link: https://youtu.be/3_MLMxJDYJo
 ## Website Link: https://mb25-prod.herokuapp.com/Project
 ## Your Name: Marwan Baroud
 
@@ -55,13 +55,13 @@
   
 - Milestone 3
   - [ ] \(N/A) User will be able to transfer between their accounts
-    -  Link to related .md file: [https://github.com/marwan1569/IT202-002/blob/Milestone2/public_html/Project/milestone3.md](https://mb25-prod.herokuapp.com/Project/transfer.php)
+    -  Link to related .md file: [https://github.com/marwan1569/IT202-002/blob/Milestone3/public_html/Project/milestone3.md](https://mb25-prod.herokuapp.com/Project/transfer.php)
   - [X] \(4/28/22) Transaction History page
-    -  Link to related .md file: [https://github.com/marwan1569/IT202-002/blob/Milestone2/public_html/Project/milestone3.md](https://mb25-prod.herokuapp.com/Project/view_transactions.php?id=7)
+    -  Link to related .md file: [https://github.com/marwan1569/IT202-002/blob/Milestone3/public_html/Project/milestone3.md](https://mb25-prod.herokuapp.com/Project/view_transactions.php?id=7)
   - [X] \(4/28/22) User’s profile page should record/show First and Last name
-    -  Link to related .md file: [https://github.com/marwan1569/IT202-002/blob/Milestone2/public_html/Project/milestone3.md](https://mb25-prod.herokuapp.com/Project/profile.php)
+    -  Link to related .md file: [https://github.com/marwan1569/IT202-002/blob/Milestone3/public_html/Project/milestone3.md](https://mb25-prod.herokuapp.com/Project/profile.php)
   - [X] \(4/29/22) User will be able to transfer funds to another user’s account
-    -  Link to related .md file: [https://github.com/marwan1569/IT202-002/blob/Milestone2/public_html/Project/milestone3.md](https://mb25-prod.herokuapp.com/Project/external_transfer.php?type=external_transfer)    
+    -  Link to related .md file: [https://github.com/marwan1569/IT202-002/blob/Milestone3/public_html/Project/milestone3.md](https://mb25-prod.herokuapp.com/Project/external_transfer.php?type=external_transfer)    
 - Milestone 4
   - [ ] \(5/9/22) User can set their profile to be public or private
     -  Link to related .md file: [https://github.com/marwan1569/IT202-002/blob/Milestone4/public_html/Project/milestone4.md](https://mb25-prod.herokuapp.com/Project/profile.php)
