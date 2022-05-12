@@ -63,9 +63,24 @@
   - [X] \(4/29/22) User will be able to transfer funds to another user’s account
     -  Link to related .md file: [https://github.com/marwan1569/IT202-002/blob/Milestone2/public_html/Project/milestone3.md](https://mb25-prod.herokuapp.com/Project/external_transfer.php?type=external_transfer)    
 - Milestone 4
-  - - [ ] \(mm/dd/yyyy of completion) Feature Title (from the proposal bullet point, if it's a sub-point indent it properly)
-  -  Link to related .md file: [Link Name](link url)
-  - 
+  - [ ] \(5/9/22) User can set their profile to be public or private
+    -  Link to related .md file: [https://github.com/marwan1569/IT202-002/blob/Milestone4/public_html/Project/milestone4.md](https://mb25-prod.herokuapp.com/Project/profile.php)
+  - [X] \(5/9/22) User will be able open a savings account
+    -  Link to related .md file: [https://github.com/marwan1569/IT202-002/blob/Milestone4/public_html/Project/milestone4.md](https://mb25-prod.herokuapp.com/Project/create_acct.php)
+  - [ ] \(5/12/22) User will be able to take out a loan
+    -  Link to related .md file: [https://github.com/marwan1569/IT202-002/blob/Milestone4/public_html/Project/milestone4.md](https://mb25-prod.herokuapp.com/Project/loan.php)
+  - [ ] \(5/12/22) Listing accounts and/or viewing Account Details should show any applicable APY or “-” if none is set for the particular account
+    -  Link to related .md file: [https://github.com/marwan1569/IT202-002/blob/Milestone4/public_html/Project/milestone4.md](https://mb25-prod.herokuapp.com/Project/view_accounts.php)
+  - [ ] \(5/12/22) User will be able to close an account
+    -  Link to related .md file: [https://github.com/marwan1569/IT202-002/blob/Milestone4/public_html/Project/milestone4.md](https://mb25-prod.herokuapp.com/Project/view_accounts.php)
+  - [X] \(5/12/22) Admin role
+    -  Link to related .md file: [https://github.com/marwan1569/IT202-002/blob/Milestone4/public_html/Project/milestone4.md](https://mb25-prod.herokuapp.com/Project/admin/admin_fncs.php)
+  
+  
+  
+  
+  
+  
 ### Intructions
 #### Don't delete this
 1. Pick one project type
