@@ -1,8 +1,9 @@
 # Project Name: Simple Bank
 ## Project Summary: his project will create a bank simulation for users. They’ll be able to have various accounts, do standard bank functions like deposit, withdraw, internal (user’s accounts)/external(other user’s accounts) transfers, and creating/closing accounts.
 ## Github Link: [https://github.com/marwan1569/IT202-002/tree/prod/public_html/Project]
-## Project Board Link: https://youtu.be/3_MLMxJDYJo
+## Project Board Link: https://github.com/marwan1569/IT202-002/projects/1
 ## Website Link: https://mb25-prod.herokuapp.com/Project
+## Youtube Link: https://youtu.be/3_MLMxJDYJo
 ## Your Name: Marwan Baroud
 
 <!-- Line item / Feature template (use this for each bullet point) -- DO NOT DELETE THIS SECTION
