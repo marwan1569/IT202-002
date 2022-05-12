@@ -195,4 +195,34 @@ error_log("query: $query");
       }
       return $r;
   }
+  function getWorldID(){
+    $db = getDB();
+    $q = "SELECT id from Accounts WHERE account_number='000000000000'";
+    $stmt = $db->prepare($q);
+        $s = $stmt->execute();
+        $results = $stmt->fetch(PDO::FETCH_ASSOC);
+    $worldID = $results["id"];
+
+    return $worldID;
+}
+function getAccount($n){
+    switch ($n) {
+        case "checking":
+            echo "Checking";
+            break;
+        case "savings":
+            echo "Savings";
+            break;
+        case "loan":
+            echo "Loan";
+            break;
+        case "world":
+            echo "World";
+            break;
+        default:
+            echo "Unsupported state: " . se($n);
+            break;
+    }
+}
+
 
