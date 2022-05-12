@@ -19,6 +19,7 @@ require (__DIR__ . "/../../partials/nav.php");
                 <li class ="nav-item" > <a class="nav-link" href="<?php echo get_url('transfer.php');?>"> Transfer </a></li>
                 <li class ="nav-item" > <a class="nav-link" href="<?php echo get_url('view_accounts.php'); ?>"> My Accounts </a></li>
                 <li class ="nav-item" > <a class="nav-link" href="<?php echo get_url('external_transfer.php?type=external_transfer');?>"> External Transfer </a></li>
+                <li class ="nav-item" > <a class="nav-link" href="<?php echo get_url('loan.php'); ?>"> Get a Loan</a></li>
             </ul>
         </div>
     </div>
